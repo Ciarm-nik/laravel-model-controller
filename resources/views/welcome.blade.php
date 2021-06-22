@@ -8,15 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
+    <div class="div container-fluid d-flex flex-wrap">
+        @foreach($movies as $movie)
 
-
-    @foreach($movies as $movie)
-
-    <div class="card-group">
-
-        <div class="card">
-
-            {{-- <img class="card-img-top" src="..." alt="Card image cap"> --}}
+        <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Title: {{$movie->title}}</h5>
                 <p class="card-text">Original title: {{$movie->original_title}}</p>
@@ -25,9 +20,9 @@
                 <p class="card-text">Vote: {{$movie->vote}}</p>
             </div>
         </div>
-
+        @endforeach
     </div>
-    @endforeach
+
 
 
 </body>
