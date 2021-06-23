@@ -10,20 +10,19 @@
 <body>
     <div class="div container-fluid d-flex flex-wrap">
         @foreach($movies as $movie)
+        {{-- @dump($movie->getattributes()) --}}
+
 
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <h5 class="card-title">Title: {{$movie->title}}</h5>
-                <p class="card-text">Original title: {{$movie->original_title}}</p>
-                <p class="card-text">Nationality: {{$movie->nationality}}</p>
-                <p class="card-text">Date: {{$movie->date}}</p>
-                <p class="card-text">Vote: {{$movie->vote}}</p>
+                <h5 class="card-title"><strong>Title: </strong>  {{$movie->title}}</h5>
+                <p class="card-text"><strong>Original title: </strong>  {{$movie->original_title}}</p>
+                <p class="card-text"><strong>Nationality: </strong>  {{$movie->nationality}}</p>
+                <p class="card-text"><strong>Date: </strong> {{$movie->date}}</p>
+                <p class="card-text"><strong>Vote: </strong> {{$movie->vote}}</p>
             </div>
         </div>
         @endforeach
     </div>
-
-
-
 </body>
 </html>
